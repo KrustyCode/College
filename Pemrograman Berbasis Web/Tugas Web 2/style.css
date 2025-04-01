@@ -1,0 +1,104 @@
+@font-face {
+    font-family: "senty-movable-type";
+    src: url(assets/fonts/SentyMovableType.ttf) format('truetype');
+}
+
+
+@font-face {
+    font-family: "senty-movable-type-2";
+    src: url(assets/fonts/SentyMovableType2.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "senty-cloud";
+    src: url(./assets/fonts/SentyCloud.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "hanyi-senty-spring-brush";
+    src: url(./assets/fonts/HanyiSentySpringBrush.ttf) format('truetype');
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+}
+
+Body{
+    text-decoration: none;
+    background-image: url(./assets/Image/gray-texture.jpg);
+    background-size: cover;
+    backdrop-filter: brightness(120%);
+}
+
+.top-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.story{
+    padding:2%;
+    position: relative;
+    z-index: 2;
+}
+
+.header-1{
+    font-family: senty-cloud;
+    font-size:min(10vw, 70px);
+    font-weight: 400;
+}
+
+.paragraph{
+    font-family: senty-movable-type;
+    color: #A6A6A6;
+    font-size: min(3.5vw, 20px);
+    width: min(90vw, 700px);
+    margin: 1% 0%;
+}
+
+.highlighted-text{
+    color: black;
+}
+
+.phrase-container{
+    display: flex;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+
+.bakmi-phrase{
+    font-family: senty-cloud;
+    writing-mode: vertical-rl;
+    font-size:min(3vw, 25px);
+    z-index: 1;
+}
+
+.journey-container{
+    margin-top: 12%;
+}
+
+.header-2{
+    font-family: senty-movable-type;
+    font-size:min(8vw, 60px);
+    padding-left: 2%;
+    font-weight: 400;
+}
+
+.photo-container{
+    padding: 0% 2.2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.photo{
+    width: min(96vw, 500px);
+    height: min(50vh, 500px);
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+

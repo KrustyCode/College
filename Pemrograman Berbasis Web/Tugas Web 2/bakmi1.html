@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, section, summary, time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+        }
+        @font-face {
+            font-family: "senty-movable-type";
+            src: url(assets/fonts/SentyMovableType.ttf) format('truetype');
+        }
+        @font-face {
+            font-family: "senty-cloud";
+            src: url(./assets/fonts/SentyCloud.ttf) format('truetype');
+        }
+
+        @font-face {
+            font-family: "hanyi-senty-spring-brush";
+            src: url(./assets/fonts/HanyiSentySpringBrush.ttf) format('truetype');
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            background-image: url(./assets/Image/gray-texture.jpg);
+            background-size: cover;
+            backdrop-filter: brightness(120%);
+            height:100vh;
+        }
+
+        a{
+            text-decoration: none
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        .movable-type{
+            font-family: senty-movable-type;
+            font-size: 40px;
+        }
+
+        .spring-brush{
+            font-family: hanyi-senty-spring-brush;
+            color: aliceblue;
+        }
+
+        .header-1{
+            font-family: senty-cloud;
+            font-size:min(10vw, 70px);
+            font-weight: 400;
+            text-align: right;
+            padding: 2% 2% 3% 2%;
+        }
+
+        .image-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-image: url(./assets/Image/bakmi_2.png);
+            background-size:cover;
+            width: 1000px;
+            height: 500px;
+        }
+
+        .bakmi-shop{
+            position: relative;
+            font-size: 70px;
+        }
+
+        .location{
+            position: relative;
+            font-size: 40px;
+        }
+
+        .journal-no{
+            font-size: 70px;
+            text-align: right;
+        }
+
+        .footer{
+            padding: 4% 2%;
+            padding-bottom: 0%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-text-image{
+            display: flex;
+            flex-direction: column;
+            padding: 2%;
+        }
+
+        .top-text-image > .location {
+            margin-top: -2vh; /* Menarik elemen lebih dekat */
+        }
+
+        .bot-text-image{
+            display: flex;
+            justify-content: right;
+            padding-right: 2%;
+        }
+
+
+
+
+
+
+    </style>
+    <title>Journal #1</title>
+</head>
+<body>
+    <h1 class ="header-1">
+        肉麵JOURNEY
+    </h1>
+    <a href="./index.html" class="container">
+        <div class="image-container">
+            <div class="top-text-image">
+                <span class = "spring-brush bakmi-shop">BAKMI 69</span>
+                <span class = "spring-brush location">Denpasar, Bali</span>
+            </div>
+            <div class="bot-text-image">
+                <span class = "spring-brush journal-no">#1</span>
+            </div>
+        </div>
+    </a>
+    <div class="footer">
+        <span class = "movable-type date">25.02.2025</span>
+        <span class = "movable-type dish-menu">Grilled Chicken Bakmi</span>
+    </div>
+</body>
+</html>
