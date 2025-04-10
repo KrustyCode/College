@@ -65,6 +65,7 @@ class Point:
         return track[-1][1]
 
 
+
 elliptic_curve = Curve (
     a = 0,
     b = 7,
@@ -88,10 +89,11 @@ def encrypt (message, public_key):
 
 def decrypt(C1, C2, private_key):
     shared_secret = C1 * private_key  # PrivateKey * C1
-    message = (C2 * pow(shared_secret.x, -1, elliptic_curve.p)) % elliptic_curve.p  # C2 dibagi shared_secret
+    message = (C2 * mod_inverse(shared_secret.x, elliptic_curve.p)) % elliptic_curve.p  # C2 dibagi shared_secret
     return message
 
 message = 123456789
+
 
 if __name__ == "__main__":
     # print(G_Point.is_on_curve())
@@ -107,7 +109,7 @@ if __name__ == "__main__":
     print(f'Original Message: {message}')
     C1, C2 = encrypt(message, public_key)
 
-    # print(f"Ciphertext: (C1={C1}, C2={C2})")
+    print(f"Ciphertext: (C1={C1}, C2={C2})")
 
     decrypted_message = decrypt(C1, C2, private_key)
     print(f"Decrypted Message: {decrypted_message}")

@@ -1,0 +1,8 @@
+[project]
+name = "MyGame"
+
+[files]
+include = [
+    "assets/0.png"
+]
+copy = true
