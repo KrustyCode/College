@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas Form HTML</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+  </head>
+  <body>
+    <p>kelompok 3 :
+      <br>1. Bayu Fadjar Dwi Putra 2308561080
+      <br>2. Jovianka Pratama Santoso 2308561062
+      <br>3. Bagus Ajie Satria 2308561044
+      <br>4. Gede Nicholas Tejasukmana Putra 2308561074
+    </p>
+    <form action="./buatevent.php" method="POST">
+      <fieldset>
+        <legend>Buat event</legend>
+        <label for="name">Nama Kegiatan:</label>
+        <input type="text" id="name" name="name" />
+        <br />
+        <br />
+        <label for="tgl_kegiatan">Tanggal kegiatan: </label>
+        <input type="date" id="tgl_kegiatan" name="tgl_kegiatan" />
+        <br />
+        <br />
+        <label for="tingkat_kegiatan">Tingkat kegiatan: </label>
+        <select name="tingkat_kegiatan" id="tingkat_kegiatan">
+            <option value="" selected>Tingkat Kegiatan</option>
+            <option value="umum">Umum</option>
+            <option value="universitas">Universitas</option>
+            <option value="fakultas">Fakultas</option>
+            <option value="prodi">Program Studi</option>
+        </select>
+        <br />
+        <br />
+        <label for="kuota">Kuota peserta: </label>
+        <input type="number" id="kuota" name="kuota" />
+        <input type="hidden" id="sembunyi" name="sembunyi" value="This too shall pass." />
+        <br />
+        <br />
+        <input type="submit" value="Submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>
