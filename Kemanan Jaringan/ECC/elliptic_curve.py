@@ -15,9 +15,10 @@ class Point:
         self.curve = curve
 
     def is_on_curve(self):
+        # y^2 = x^3 + ax + b
         lhs = (self.y**2) % self.curve.p
         rhs = (self.x**3 + self.curve.a * self.x + self.curve.b) % self.curve.p
-        return round (lhs, 6) == round (rhs, 6)
+        return lhs == rhs
     
     def __repr__(self):
         if self.x is None or self.y is None:
@@ -32,6 +33,7 @@ class Point:
         if not isinstance(self, Point) or not isinstance(other, Point):
             raise TypeError ('Expected objects of class Point')
         
+        #identity coordinate y
         if self.x == None:
             return other
         if other.x == None:
@@ -39,12 +41,11 @@ class Point:
 
         if self.x == other.x and self.y  == -(other.y - self.curve.p):
             return Point(x = None, y = None, curve = self.curve)
-        
+    
         #two points are different
         if self.x != other.x:
             m = (other.y - self.y) * mod_inverse(other.x - self.x, self.curve.p)
 
-        
         #two points are the same or point doubling (derivative)
         if self.x == other.x and self.y == other.y:
             m = (3*self.x**2 + self.curve.a) * mod_inverse(2*self.y, self.curve.p)
@@ -63,7 +64,6 @@ class Point:
                 track.append ((track[-1][0] + tracker, track[-1][1] + result))
         
         return track[-1][1]
-
 
 
 elliptic_curve = Curve (
@@ -96,20 +96,14 @@ message = 123456789
 
 
 if __name__ == "__main__":
-    # print(G_Point.is_on_curve())
-    # g3 = G_Point * 5  
-    # print(g3.x, g3.y)
     private_key = secrets.randbelow(n)
 
-    # print(f'Private Key: {hex(private_key)}')
-
     public_key = G_Point * private_key
-    # print(f'\nPublic key: {hex(public_key.x), hex(public_key.y)}')
 
-    print(f'Original Message: {message}')
+    print(f'Original Message: {message}\n')
     C1, C2 = encrypt(message, public_key)
 
-    print(f"Ciphertext: (C1={C1}, C2={C2})")
+    print(f"Ciphertext:\nC1={C1}\nC2={C2}\n")
 
     decrypted_message = decrypt(C1, C2, private_key)
     print(f"Decrypted Message: {decrypted_message}")
