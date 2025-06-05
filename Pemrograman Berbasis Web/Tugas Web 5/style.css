@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+body{
+    font-family: nunito;
+}
+
+.table-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.table-header h2 {
+    margin: 0;
+}
+
+a.add-button {
+    padding: 0.5rem 1rem;
+    background-color: #27ae60;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+a.add-button:hover {
+    background-color: #1e874b;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+}
+
+th {
+    background-color: #f0f0f0;
+    font-weight: 600;
+}
+
+.action-button-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+button.edit-button,
+button.delete-button {
+    padding: 6px 12px;
+    font-size: 13px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button.edit-button {
+    background-color: #f39c12;
+    color: white;
+}
+
+button.edit-button:hover {
+    background-color: #d68910;
+}
+
+button.delete-button {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button.delete-button:hover {
+    background-color: #c0392b;
+}
