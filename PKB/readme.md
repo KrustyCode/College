@@ -7,11 +7,11 @@
 [![WTFPL License][license-shield]][license-url]
 
 <!-- SHIELDS -->
-[contributors-shield]: https://img.shields.io/github/contributors/jovianka/pancaran?style=flat-square&color=%23ADD8E6
-[contributors-url]: https://github.com/jovianka/pancaran/graphs/contributors
+[contributors-shield]: https://github.com/KrustyCode/College/tree/main/PKB?style=flat-square&color=%23ADD8E6
+[contributors-url]: https://github.com/KrustyCode/College/tree/main/PKB/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/jovianka/pancaran?style=flat-square&color=%23ADD8E6
-[forks-url]: https://github.com/jovianka/pancaran/fork
+[forks-shield]: https://img.shields.io/github/forks/KrustyCode/College/tree/main/PKB?style=flat-square&color=%23ADD8E6
+[forks-url]: https://github.com/KrustyCode/College/tree/main/PKB/fork
 
 [license-shield]: https://img.shields.io/github/license/jovianka/pancaran?style=flat-square&color=%23ADD8E6
 [license-url]: https://github.com/jovianak/pancaran/blob/main/LICENSE
