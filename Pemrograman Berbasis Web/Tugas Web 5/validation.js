@@ -16,12 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
             errorMessages.push("Judul harus isi.");
         }
 
-        if (deskripsi.length > 500) {
-            errorMessages.push("Deskripsi tidak boleh lebih dari 500 karakter.");
+        if (judul.length > 100) {
+            errorMessages.push("Judul tidak boleh lebih dari 100 karakter.");
         }
 
-        if (!deadline) {
-            errorMessages.push("Deadline harus diisi.");
+        if (deskripsi.length > 500) {
+            errorMessages.push("Deskripsi tidak boleh lebih dari 500 karakter.");
         }
 
         const validPrioritas = ["Rendah", "Sedang", "Tinggi"];

@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "todolist"; // Buat dulu di phpMyAdmin
+$user = "root"; //Usernam DB
+$pass = ""; //Password Akun DB
+$db   = "todolist"; // Nama DB
 
 $koneksi = new mysqli($host, $user, $pass, $db);
 
